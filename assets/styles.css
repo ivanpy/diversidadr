@@ -168,10 +168,6 @@ hero--no-bg .tlgbiq {
 
 .hero--no-bg {
   background: transparent;
-}
-
-.hero--no-bg {
-  background: transparent;
   padding-top: 6rem;
   padding-bottom: 3rem;
 }
@@ -219,7 +215,7 @@ hero--no-bg .tlgbiq {
 .hero .hero-title{ color:#fff; }
 .hero .hero-sub{ color:rgba(255,255,255,.88); }
 .hero .hero-sub strong{ color:#fff; }
-.hero .tlgbiq{ background: var(--fucsia); color:#fff; padding:.15em .5em; border-radius:999px; }
+.hero .tlgbiq{ display:inline; background: var(--fucsia); color:#fff; padding:.15em .5em; border-radius:999px; }
 .hero--no-bg .tlgbiq { background: var(--fucsia); color: #fff; padding: .15em .5em; border-radius: 999px; }
 .hero .hero-stats{ border-top-color:rgba(255,255,255,.2); }
 
@@ -410,7 +406,7 @@ hero--no-bg .tlgbiq {
 }
 
 .section-registro {
-  padding-top: 1rem;
+  padding-top: 0;
 }
 
 .section-eyebrow{
@@ -481,7 +477,7 @@ hero--no-bg .tlgbiq {
   .bento-a,.bento-b,.bento-d,.bento-e,.bento-f{ grid-column:span 1; }
   .bento-c{ grid-column:span 2;grid-row:auto; }
 }
-@media (max-width:575px){ .bento-grid{ grid-template-columns:1fr; } .bento-c{ grid-column:1; } }
+@media (max-width:575px){ .bento-grid{ grid-template-columns:1fr; } .bento-c{ grid-column:1; } .hero-pill{ margin-top:1.5rem; } }
 
 .section-noticias{ background:#fff; }
 .news-filters{ display:flex;gap:.5rem;flex-wrap:wrap; }
@@ -518,7 +514,8 @@ hero--no-bg .tlgbiq {
 .news-col{ transition:opacity .3s ease,transform .3s ease; }
 .news-col.is-hidden{ display:none; }
 
-.section-registro{ position:relative;background:linear-gradient(135deg,var(--noche) 0%,var(--azul) 60%,var(--azul-deep) 100%);color:#fff;overflow:hidden; }
+.section-registro{ position:relative;background:linear-gradient(135deg,var(--noche) 0%,var(--azul) 60%,var(--azul-deep) 100%);color:#fff;overflow:hidden;padding-top:0; }
+.section-registro .hero-scroll-hint{ display:none; }
 .section-registro::before{ content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 80% 0%,rgba(236,38,143,.2),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(80,89,188,.25),transparent 70%);z-index:0; }
 .section-registro .container{ position:relative;z-index:1; }
 .registro-intro{ color:#fff; }
@@ -530,7 +527,7 @@ hero--no-bg .tlgbiq {
 .registro-quote p{ font-style:italic;font-size:1.15rem;margin:.5rem 0;color:#fff;line-height:1.4;font-weight:400; }
 .registro-quote span{ font-size:.85rem;color:rgba(255,255,255,.75);letter-spacing:.05em; }
 
-.form-card{ background:rgba(255,255,255,.97);color:var(--ink);border-radius:var(--radius-xl);padding:2rem;box-shadow:0 40px 80px -30px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.5); }
+.form-card{ background:rgba(255,255,255,.97);color:var(--ink);border-radius:var(--radius-xl);padding:2rem;box-shadow:0 40px 80px -30px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.5);position:relative;z-index:2; }
 .form-tabs{ border:none;display:flex;gap:.5rem;flex-wrap:wrap;background:var(--bg-soft);padding:.4rem;border-radius:999px;margin-bottom:2rem; }
 .form-tabs .nav-link{ border:none;border-radius:999px !important;color:var(--ink-soft);font-weight:500;font-size:.9rem;padding:.6rem 1rem;display:inline-flex;align-items:center;gap:.5rem;background:transparent;transition:all .25s; }
 .form-tabs .nav-link:hover{ color:var(--azul); }
@@ -599,9 +596,9 @@ select.form-control-2026{ appearance:none;background-image:url("data:image/svg+x
 [data-reveal].is-in{ opacity:1;transform:translateY(0); }
 
 @media (max-width:991px){
-  .navbar-logo{ height:40px; }
+  .navbar-logo{ height:32px; }
   .nav-cta{ padding:.5rem 1rem;font-size:.9rem; }
-  .hero{ padding:6rem 0 2.5rem; }
+  .hero{ padding:4rem 0 2rem; }
   .hero-visual{ margin-top:3rem; }
   .section{ padding:5rem 0; }
   .section-head{ margin-bottom:2.5rem; }
@@ -609,11 +606,16 @@ select.form-control-2026{ appearance:none;background-image:url("data:image/svg+x
   .cta-inner{ padding:2rem; }
 }
 @media (max-width:575px){
+  .hero{ padding:4rem 0 2rem; }
+  .hero--no-bg{ padding-top:0.5rem; padding-bottom:3rem; }
+  .section{ padding:2rem 0; }
   .hero-stats{ gap:1rem; }
+  .hero-scroll-hint{ bottom:1rem; }
   .stat-num{ font-size:1.4rem; }
   .visual-badge{ font-size:.7rem;padding:.4rem .7rem; }
   .form-tabs{ border-radius:var(--radius-md); }
   .footer-logo{ max-width:100%; }
+  .form-card{ margin-bottom:2rem; }
 }
 
 /* =========================================================
