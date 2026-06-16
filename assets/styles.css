@@ -110,6 +110,9 @@ body{
   padding:7.5rem 0 3rem;
   overflow:hidden;
   isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 .hero-bg-img{
   position:absolute;inset:0;
@@ -136,12 +139,13 @@ body{
 .hero-text-col{ display:flex;flex-direction:column; }
 
 .hero .hero-pill{ background:rgba(255,255,255,.16);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.92); }
-.hero .hero-title{ color:#fff; }
-.hero .hero-sub{ color:rgba(255,255,255,.88); }
+.hero .hero-title{ color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6); }
+.hero .hero-sub{ color:rgba(255,255,255,.95);text-shadow:0 1px 8px rgba(0,0,0,.55); }
 .hero .hero-sub strong{ color:#fff; }
 .hero .tlgbiq{ background:rgba(255,255,255,.18);color:#fff; }
 .hero .hero-stats{ border-top-color:rgba(255,255,255,.2); }
-.hero .stat-label{ color:rgba(255,255,255,.7); }
+.hero .stat-num{ filter:drop-shadow(0 2px 8px rgba(0,0,0,.55)); }
+.hero .stat-label{ color:rgba(255,255,255,.7);text-shadow:0 1px 6px rgba(0,0,0,.6); }
 .hero .stat-divider{ background:linear-gradient(180deg,transparent,rgba(255,255,255,.3),transparent); }
 .hero .btn-ghost-2026{ background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);color:#fff; }
 .hero .btn-ghost-2026:hover{ background:rgba(255,255,255,.25);border-color:#fff;color:#fff; }
@@ -426,6 +430,9 @@ body{
 .news-col{ transition:opacity .3s ease,transform .3s ease; }
 .news-col.is-hidden{ display:none; }
 
+.section-registro .hero-pill{ background:rgba(255,255,255,.16);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.92);white-space:normal;margin-bottom:1.25rem; }
+.section-registro .hero-pill .pulse-dot{ flex-shrink:0; }
+@media(max-width:767px){ .hero-pill{ white-space:normal; } }
 .section-registro{ position:relative;background:linear-gradient(135deg,var(--noche) 0%,var(--azul) 60%,var(--azul-deep) 100%);color:#fff;overflow:hidden; }
 .section-registro::before{ content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 80% 0%,rgba(236,38,143,.2),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(80,89,188,.25),transparent 70%);z-index:0; }
 .section-registro .container{ position:relative;z-index:1; }
