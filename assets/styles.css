@@ -109,83 +109,9 @@ body{
   padding:7.5rem 0 3rem;
   overflow:hidden;
   isolation:isolate;
-}
-
-.hero-stats--vertical .stat {
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-
-.hero-stats--vertical .stat-num {
-  color: var(--fucsia);
-  font-weight: 700;
-  text-align: left;
-}
-
-.hero-stats--vertical .stat-label {
-  color: #fff;
-  font-weight: 400;
-  flex: 1;
-}
-
-.hero-stats--vertical {
-  flex-direction: column;
-  border-top: 1px solid rgba(255,255,255,.15);
-  border-bottom: 1px solid rgba(255,255,255,.15);
-  padding: 1rem 0;
-}
-
-
-.hero-stats-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 0;
-}
-
-.hero-stats--vertical .stat-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255,255,255,.15);
-}
-
-.hero--no-bg .hero-text-col {
-  text-align: left;
-  align-items: flex-start;
-}
-
-.hero--no-bg .hero-sub strong {
-  color: #fff;
-}
-hero--no-bg .tlgbiq {
-  background: var(--fucsia);
-  color: #fff;
-  padding: .15em .5em;
-  border-radius: 999px;
-}
-
-.hero--no-bg {
-  background: transparent;
-  padding-top: 6rem;
-  padding-bottom: 3rem;
-}
-
-.hero--no-bg .hero-sub {
-  color: #fff;
-}
-
-.hero--no-bg .stat-label {
-  color: #fff;
-  font-weight: 400 !important;
-  font-size: 1rem;
-}
-
-.hero--no-bg .stat-num {
-  color: var(--fucsia);
-  font-weight: 700;
-  font-size: 3.5rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 .hero-bg-img{
   position:absolute;inset:0;
@@ -212,18 +138,14 @@ hero--no-bg .tlgbiq {
 .hero-text-col{ display:flex;flex-direction:column; }
 
 .hero .hero-pill{ background:rgba(255,255,255,.16);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.92); }
-.hero .hero-title{ color:#fff;padding-top:2rem; }
-.hero .hero-sub{ color:rgba(255,255,255,.88); }
+.hero .hero-title{ color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6); }
+.hero .hero-sub{ color:rgba(255,255,255,.95);text-shadow:0 1px 8px rgba(0,0,0,.55); }
 .hero .hero-sub strong{ color:#fff; }
 .hero .tlgbiq{ display:inline; background: var(--fucsia); color:#fff; padding:.15em .5em; border-radius:999px; }
 .hero--no-bg .tlgbiq { background: var(--fucsia); color: #fff; padding: .15em .5em; border-radius: 999px; }
 .hero .hero-stats{ border-top-color:rgba(255,255,255,.2); }
-
-.hero--no-bg .hero-stats {
-  border-top-color: rgba(255,255,255,.15);
-}
-
-.hero .stat-label{ color:rgba(255,255,255,.7); }
+.hero .stat-num{ filter:drop-shadow(0 2px 8px rgba(0,0,0,.55)); }
+.hero .stat-label{ color:rgba(255,255,255,.7);text-shadow:0 1px 6px rgba(0,0,0,.6); }
 .hero .stat-divider{ background:linear-gradient(180deg,transparent,rgba(255,255,255,.3),transparent); }
 .hero .btn-ghost-2026{ background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);color:#fff; }
 .hero .btn-ghost-2026:hover{ background:rgba(255,255,255,.25);border-color:#fff;color:#fff; }
@@ -515,8 +437,10 @@ hero--no-bg .tlgbiq {
 .news-col{ transition:opacity .3s ease,transform .3s ease; }
 .news-col.is-hidden{ display:none; }
 
-.section-registro{ position:relative;background:linear-gradient(135deg,var(--noche) 0%,var(--azul) 60%,var(--azul-deep) 100%);color:#fff;overflow:hidden;padding-top:0; }
-.section-registro .hero-scroll-hint{ display:none; }
+.section-registro .hero-pill{ background:rgba(255,255,255,.16);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.92);white-space:normal;margin-bottom:1.25rem; }
+.section-registro .hero-pill .pulse-dot{ flex-shrink:0; }
+@media(max-width:767px){ .hero-pill{ white-space:normal; } }
+.section-registro{ position:relative;background:linear-gradient(135deg,var(--noche) 0%,var(--azul) 60%,var(--azul-deep) 100%);color:#fff;overflow:hidden; }
 .section-registro::before{ content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 80% 0%,rgba(236,38,143,.2),transparent 70%),radial-gradient(500px 300px at 0% 100%,rgba(80,89,188,.25),transparent 70%);z-index:0; }
 .section-registro .container{ position:relative;z-index:1; }
 .registro-intro{ color:#fff; }
